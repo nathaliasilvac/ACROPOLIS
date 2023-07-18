@@ -34,5 +34,7 @@ ACROPOLIS is a  tool designed for the classification of risk associated with off
 -[pandas 1.5.1](https://pypi.org/project/pandas/)
 
  ## Installation  
-* Download folder Scripts and the [ML model](https://drive.google.com/file/d/1LAI0xOYKKjGAjZYNjWS_DYsMXkeV5zJR/view?usp=drive_link), save the files in the same folder on your computer.
+Download the "Scripts" folder and the [ML model](https://drive.google.com/file/d/1LAI0xOYKKjGAjZYNjWS_DYsMXkeV5zJR/view?usp=drive_link),  and save the files in the same folder on your computer. Execute the Python file from the Python console or any other console, such as Spyder.
 
+## Support
+For support, email me at nsilva@cimne.upc.edu
