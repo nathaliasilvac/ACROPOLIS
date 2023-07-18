@@ -19,6 +19,20 @@ ACROPOLIS is a  tool designed for the classification of risk associated with off
 
 -[geopandas 0.11](https://geopandas.org/en/stable/)
 
+-[joblib 1.2.0](https://joblib.readthedocs.io/en/latest/installing.html)
+
+-[pillow 9.3.0](https://pillow.readthedocs.io/en/stable/installation.html)
+
+-[pysheds 0.2.7](https://pypi.org/project/pysheds/)
+
+-[rasterio 1.3.4](https://pypi.org/project/rasterio/)   
+
+-[matplotlib 3.6.2](https://matplotlib.org/stable/index.html)
+
+-[numpy 1.23.4](https://numpy.org/install/)
+
+-[pandas 1.5.1](https://pypi.org/project/pandas/)
+
  ## Installation  
 * Download folder Scripts and the [ML model](https://drive.google.com/file/d/1LAI0xOYKKjGAjZYNjWS_DYsMXkeV5zJR/view?usp=drive_link), save the files in the same folder on your computer.
 
