@@ -9,6 +9,9 @@ There are various portals and tools available for downloading digital elevation 
 ![dem](Images/dem.bmp) 
 Typically, the downloaded files are in ASCII format. The tool can directly read these files or, if preferred, users can opt for the TIF format. It is advisable for users to review the downloaded file using GIS software, such as [QGIS](https://www.qgis.org/en/site/forusers/download.html). This allows them to crop the DEM if desired. Note that processing time may increase for larger DEMs.
 
+## 1.2 Roughness:
+One of the input parameters is the Manning coefficient, which is related to land use. Users can refer to the [Methodological Guide for the Development of the National System of Flood Zone Cartography](https://www.miteco.gob.es/es/agua/publicaciones/guia_snczi_baja_optimizada_tcm30-422920.pdf), where Appendix V provides the assigned Manning coefficient associated with land uses (CORINE). If the user wants more detailed information about land use in the area surrounding the reservoir, it is possible to download the land cover map of Spain from the Download Center. The figure presents an example of the land use map for the Catalonia region, created using the downloaded data.
+
 
 
 
