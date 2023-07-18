@@ -13,4 +13,8 @@ ACROPOLIS is a  tool designed for the classification of risk associated with off
 * [Anaconda](https://www.anaconda.com/download)
 
  ## Installation  
- Download the [Scripts]( folder
+* Download folder Scripts and the [ML model](https://drive.google.com/file/d/1LAI0xOYKKjGAjZYNjWS_DYsMXkeV5zJR/view?usp=drive_link), save the files in the same folder on your computer.
+* Open Anaconda Navigator, select the Environments tab and click on Import. Choose the envns.yaml file.
+  
+Open Anaconda Prompt and type: conda activate Acropolis. Upon pressing enter, Anaconda will select the environment we imported in the previous step.
+On the next line, type: Python V5_ACROPOLIS.py, press enter, and the interface will open. Make sure that the files inside ACROPOLIS.zip are in the same folder shown in Anaconda Prompt, or else change the directory accordingly. 
