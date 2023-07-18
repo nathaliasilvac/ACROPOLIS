@@ -9,13 +9,16 @@ ACROPOLIS is a  tool designed for the classification of risk associated with off
 4. Stochastic analysis
 
 ## Prerequisites 
-* [Python 3.8](https://www.python.org/downloads/release/python-380/)
-* [Anaconda](https://www.anaconda.com/download)
+-[Python 3.8](https://www.python.org/downloads/release/python-380/)
+
+-[pyproj 3.4.1](https://pyproj4.github.io/pyproj/stable/)
+
+-[tkintermapview 1.17](https://github.com/TomSchimansky/TkinterMapView)
+
+-[tkinter 3.11](https://docs.python.org/3/library/tkinter.html)
+
+-[geopandas 0.11](https://geopandas.org/en/stable/)
 
  ## Installation  
 * Download folder Scripts and the [ML model](https://drive.google.com/file/d/1LAI0xOYKKjGAjZYNjWS_DYsMXkeV5zJR/view?usp=drive_link), save the files in the same folder on your computer.
-* Open Anaconda Navigator, select the Environments tab and click on Import. Choose the Acropolis.yml file.
-  ![Anaconda](Images/Anaconda.bmp)
-*Open Anaconda Prompt and type: conda activate Acropolis. Upon pressing enter, Anaconda will select the environment we imported in the previous step.
-*On the next line, type: Python EN-ACROPOLIS.py, press enter, and the interface will open. Make sure that the files inside Scripts are in the same folder shown in Anaconda Prompt, or else change the directory accordingly.
-  ![Prompt](Images/prompt.png)
+
