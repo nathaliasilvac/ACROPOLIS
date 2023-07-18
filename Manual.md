@@ -41,5 +41,8 @@ Figure 3. Examples of breach locations for La Lagunilla off-stream reservoir (Go
 ![breaches](Images/Location.png)
 
 ### 1.4.2 Distances and slopes:
+With a clear understanding of the breach direction and by observing the elevation profile, three physical parameters can be estimated: LB, Slb, and Slc, which correspond to the length of section B (Figure 2) (transition zone) and the longitudinal slopes. Figure 3 shows the selected lengths for LB and LC. Although LC is not an input parameter, it is useful for calculating the slope Slc. Equation 1 presents the formula for calculating the longitudinal slopes.
+
+Figure 4. Example selection of the parameters on the terrain profile of the breach axis
 
 
