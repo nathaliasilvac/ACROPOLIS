@@ -13,3 +13,4 @@ ACROPOLIS is a  tool designed for the classification of risk associated with off
 * [Anaconda](https://www.anaconda.com/download)
 
  ## Installation  
+ Download the [Scripts]( folder
