@@ -32,3 +32,10 @@ The Machine Learning model integrated into the interface was trained with 15 inp
 Figure 2. Synthetic geometry
 ![geometry](Images/Synthetic.bmp)
 
+Generally, the user is aware of the dimensions of the reservoir (Wr, Hr, Lr, and Volume) and the estimation of the Manning coefficient was explained in section 1.2. Therefore, it is necessary for them to calculate the other 8 variables. [Google Earth Pro](https://earth.google.com/web/) is a freely available tool that provides the necessary tools to estimate the missing parameters.
+
+### 1.4.1 Breach location:
+By locating the reservoir in Google Earth and using the Add Path tool, the user can draw different paths where they want to evaluate the reservoir breach. For example, Figure 5 shows two breaches (R1 and R2) in the La Lagunilla reservoir. The user can perform the analysis with the desired breach. For the sake of simplicity in this manual, the analysis will be performed with breach R1.
+
+Figure 3. Examples of breach locations for La Lagunilla off-stream reservoir (Google Earth)
+
