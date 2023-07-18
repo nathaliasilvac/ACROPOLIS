@@ -47,4 +47,4 @@ Figure 4. Example selection of the parameters on the terrain profile of the brea
 ![profile](Images/Profile.bmp)
 
 The equation below presents the formula for calculating the longitudinal slopes.
-
+![Q1](Images/Eq1.png)
