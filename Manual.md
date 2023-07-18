@@ -6,6 +6,8 @@ The pre-processing is divided into four parts: 1) Downloading the digital elevat
 
 ## 1.1 Digital Elevation Model (DEM):
 There are various portals and tools available for downloading digital elevation models. In Spain,  the [Download Center of the National Geographic Institute (IGN)](https://centrodedescargas.cnig.es/CentroDescargas/index.jsp), offers free access to geographic information. By providing the reservoir's coordinates, users can search for and download the corresponding DEM.
+
+Figure 1. Download Center of the National Geographic Institute
 ![dem](Images/dem.bmp) 
 Typically, the downloaded files are in ASCII format. The tool can directly read these files or, if preferred, users can opt for the TIF format. It is advisable for users to review the downloaded file using GIS software, such as [QGIS](https://www.qgis.org/en/site/forusers/download.html). This allows them to crop the DEM if desired. Note that processing time may increase for larger DEMs.
 
@@ -14,6 +16,7 @@ One of the input parameters is the Manning coefficient, which is related to land
 
 ## 1.3 Areas of Interest (AoI):
 According to Spanish regulations, the level of risk must be assessed in the areas surrounding the off-stream reservoir that may be in danger in the event of failure. Residential areas, urban centers, agricultural zones, and natural parks, among others, should be evaluated. The user must prepare a comma-separated values (*.csv) file with four columns: ID, x, y, and type. The ID column corresponds to the assigned number of the point, "x" and "y" represent the coordinates (EPSG 25830 or EPSG 25831), and the type describes the vulnerable area. The type column can be filled with 7 options. The Table 1 presents the possible options and their descriptions. The application takes into account the type of vulnerable area to estimate the reservoir classification.
+
 Table 1. Types of AoI
 ![table](Images/Types.bmp)
 
@@ -26,4 +29,6 @@ The user can extract the coordinates for each affected area using Google Earth o
 ## 1.4 Physical parameters:
 The Machine Learning model integrated into the interface was trained with 15 input variables based on synthetic geometry. To apply the model to real cases, a conversion from synthetic parameters to real terrain is required. Figure 4 shows the diagram of the synthetic geometry, which is located in the Project menu of the interface. The user must manually enter the displayed variables, taking into account the indicated units.
 
+Figure 2. Synthetic geometry
+![geometry](Images/Synthetic.bmp)
 
