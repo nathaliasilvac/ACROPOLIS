@@ -41,10 +41,20 @@ Figure 3. Examples of breach locations for La Lagunilla off-stream reservoir (Go
 ![breaches](Images/Location.png)
 
 ### 1.4.2 Distances and slopes:
-With a clear understanding of the breach direction and by observing the elevation profile, three physical parameters can be estimated: LB, Slb, and Slc, which correspond to the length of section B (Figure 2) (transition zone) and the longitudinal slopes. Figure 3 shows the selected lengths for LB and LC. Although LC is not an input parameter, it is useful for calculating the slope Slc. 
+With a clear understanding of the breach direction and by observing the elevation profile, three physical parameters can be estimated: LB, Slb, and Slc, which correspond to the length of section B (Figure 2) (transition zone) and the longitudinal slopes. Figure 3 shows the selected lengths for LB and LC. Although LC is not an input parameter, it is useful for calculating the slope Slc.  To calculate the longitudinal slopes, the following equation can be utilized: Slc=(E1-E2)/LC*100.
 
 Figure 4. Example selection of the parameters on the terrain profile of the breach axis
 ![profile](Images/Profile.bmp)
 
-The equation below presents the formula for calculating the longitudinal slopes.
-![Q1](Images/Eq1.png)
+To estimate the transverse slope (St), the user can draw multiple profiles crossing perpendicular to the breach axis. By following the same procedure as for the longitudinal slopes, it is possible to estimate the transverse slope. Additionally, with the cross-sections, it is possible to observe if there is a preferential  channel and the direction of flow. Using the same elevation profile, the dimensions of the channel can be estimated, along with the BL distance.
+
+# 2. Application of the tool
+## 2.1 Main window:
+The main window of the interface consists of a Project menu, where the corresponding information regarding the physical parameters and synthetic geometry is located. At the top, there is an option for the coordinate system, where you can choose the system in which you want to work. The options include the two systems used in Spain: EPSG:25830 - ETRS89 / UTM zone 30N and EPSG:25831 - ETRS89 / UTM zone 31N.
+It is important to select the coordinate system in which the information was extracted during the pre-processing (sections 1.1 and 1.3).
+
+In the UTMx and UTMy fields, the user enters the coordinates of the reservoir, and upon clicking the Search button, the viewer will display the location of the reservoir. Then, fields are shown to enter the physical parameters of the reservoir, which the user estimated during the processing (sections 1.2 and 1.4).
+
+Once the data is completed and the Ok button is clicked, the section for loading the DEM file obtained in section 1.1 will appear at the bottom. The application allows the loading of TIF or ASCII files. 
+
+The interface internally processes the DEM, filling depressions and removing peaks. It calculates the flow direction in each pixel and finally computes the accumulation, which is defined as the amount of area (in terms of the number of cells or pixels) drained into each cell.  The main objective of calculating terrain accumulation is to identify the main drainage network around the reservoir. This network determines the direction in which the breach wave propagates.
