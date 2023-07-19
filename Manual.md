@@ -75,6 +75,6 @@ Figure 7. Location of AoI and axes Lagunilla
 ![Lagunilla_aoi](Images/AOI_Lagunilla.bmp)
 
 ## 2.1 Calculation of risk and classification of the off-stream reservoir:
-
+When calculating the breach axis, a new button appears at the bottom. When clicking on "Risk calculation," the interface uses the ML model and classifies each of the conditions as "Risk" or "Not Risk." With this classification and considering the type of condition, the dam is classified accordingly.
 
 
