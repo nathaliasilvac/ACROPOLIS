@@ -75,6 +75,11 @@ Figure 7. Location of AoI and axes Lagunilla
 ![Lagunilla_aoi](Images/AOI_Lagunilla.bmp)
 
 ## 2.1 Calculation of risk and classification of the off-stream reservoir:
-When calculating the breach axis, a new button appears at the bottom. When clicking on "Risk calculation," the interface uses the ML model and classifies each of the conditions as "Risk" or "Not Risk." With this classification and considering the type of condition, the dam is classified accordingly.
+When calculating the breach axis, a new button appears at the bottom. When clicking on "Risk calculation," the interface uses the ML model and classifies each of the conditions as "Risk" or "Not Risk." With this classification and considering the type of condition, the dam is classified accordingly. 
+
+The classification of the conditions shown in Figure 8 is of a deterministic type. However, the user can perform a stochastic analysis by clicking on the button. With this option, the interface will create a number of iterations, varying each input variable by ±10%. Upon clicking the button, a new window opens, asking the user to enter the number of iterations (n) they wish to perform. The interface will then classify each condition n times using the Machine Learning model and calculate the percentage of times the condition is classified as "Risk" or "Not Risk," as applicable. Once the interface completes the iterations, a new column will appear next to the risk classification, showing the estimated percentage (Figure 8).
+
+Figure 8. Results and stochastic analysis
+![Lagunilla_aoi](Images/Results.bmp)
 
 
