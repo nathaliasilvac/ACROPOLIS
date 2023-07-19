@@ -1,1 +1,17 @@
+Inputs:
+UTM, ETRS89 zone 30N: X: 684.174 m Y: 4.277.896 m
+Depth (Hr)	4.8 m
+Volume	0.11 hm3
+Manning coefficient	0.04 m/s1/3
+Width reservoir (Wr)	198 m
+Length reservoir (Lr)	154 m
+Longitudinal slope section C (Slc)	0.5%
+Longitudinal slope section B (Slb)	0.8%
+Transversal slope (St)	0.6%
+Longitude Zone B (LB)	250 m
+Location reservoir (Bl)	−350 m
+Width channel (Wc)	10 m
+Depth preferred channel (Hc)	0.5 m
 
+Threshold to filter: 60.000
+Angle: 75º
