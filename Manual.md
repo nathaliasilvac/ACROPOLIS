@@ -72,7 +72,7 @@ When clicking on "Upload AoI," the interface will prompt the user to select the 
 The window displays a graph with the locations of the conditions and the extracted drainage network (Figure 7). The drainage network represents the axis of the main channel of the synthetic geometry. To represent the axis of the selected breach in the preprocessing stage (Section 1.4.1), the interface requests the user to specify the angle at which the breach is located, with the location of the reservoir as the origin. The selected angle must ensure that the breach axis is parallel to the drainage network, just as it is in the synthetic geometry (Figure 2). The button "See AoI" opens a new window showing a Google Earth viewer with the locations of the AoI.
 
 Figure 7. Location of AoI and axes Lagunilla
-![Lagunilla_aoi](Images/aoi_Lagunilla.bmp)
+![Lagunilla_aoi](Images/AOI_Lagunilla.bmp)
 
 ## 2.1 Calculation of risk and classification of the off-stream reservoir:
 
