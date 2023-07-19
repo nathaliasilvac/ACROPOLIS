@@ -55,6 +55,13 @@ It is important to select the coordinate system in which the information was ext
 
 In the UTMx and UTMy fields, the user enters the coordinates of the reservoir, and upon clicking the Search button, the viewer will display the location of the reservoir. Then, fields are shown to enter the physical parameters of the reservoir, which the user estimated during the processing (sections 1.2 and 1.4).
 
-Once the data is completed and the Ok button is clicked, the section for loading the DEM file obtained in section 1.1 will appear at the bottom. The application allows the loading of TIF or ASCII files. 
+Figure 5. Physical parameters and location Lagunilla off-stream reservoir
+![Lagunilla](Images/Lagunilla_window.bmp)
 
+Once the data is completed and the Ok button is clicked, the section for loading the DEM file obtained in section 1.1 will appear at the bottom. The application allows the loading of TIF or ASCII files. 
 The interface internally processes the DEM, filling depressions and removing peaks. It calculates the flow direction in each pixel and finally computes the accumulation, which is defined as the amount of area (in terms of the number of cells or pixels) drained into each cell.  The main objective of calculating terrain accumulation is to identify the main drainage network around the reservoir. This network determines the direction in which the breach wave propagates.
+
+At the bottom of the accumulation map, the user must enter the "Threshold to Filter," which corresponds to the maximum number of accumulated cells they wish to extract (as a rule, the minimum value on the color scale can be used). The user can try different thresholds, and upon clicking "OK", the filtered drainage network graph will appear at the bottom and update each time the threshold is changed. Figure 6shows the filtered network of La Lagunilla.
+
+Figure 6. Flow accumulation and filtered network Lagunilla
+![Lagunilla_drain](Images/Drainage_Lagunilla.bmp)
