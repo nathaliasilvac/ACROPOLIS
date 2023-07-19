@@ -61,7 +61,14 @@ Figure 5. Physical parameters and location Lagunilla off-stream reservoir
 Once the data is completed and the Ok button is clicked, the section for loading the DEM file obtained in section 1.1 will appear at the bottom. The application allows the loading of TIF or ASCII files. 
 The interface internally processes the DEM, filling depressions and removing peaks. It calculates the flow direction in each pixel and finally computes the accumulation, which is defined as the amount of area (in terms of the number of cells or pixels) drained into each cell.  The main objective of calculating terrain accumulation is to identify the main drainage network around the reservoir. This network determines the direction in which the breach wave propagates.
 
-At the bottom of the accumulation map, the user must enter the "Threshold to Filter," which corresponds to the maximum number of accumulated cells they wish to extract (as a rule, the minimum value on the color scale can be used). The user can try different thresholds, and upon clicking "OK", the filtered drainage network graph will appear at the bottom and update each time the threshold is changed. Figure 6shows the filtered network of La Lagunilla.
+At the bottom of the accumulation map, the user must enter the "Threshold to Filter," which corresponds to the maximum number of accumulated cells they wish to extract (as a rule, the minimum value on the color scale can be used). The user can try different thresholds, and upon clicking "OK", the filtered drainage network graph will appear at the bottom and update each time the threshold is changed. Figure 6 shows the filtered network of La Lagunilla.
 
 Figure 6. Flow accumulation and filtered network Lagunilla
 ![Lagunilla_drain](Images/Drainage_Lagunilla.bmp)
+
+## 2.1 Calculation window and results:
+When clicking on "Upload AoI," the interface will prompt the user to select the file containing the condition information, and only files with the extension *.csv are allowed. This file is prepared during the processing phase (Section 1.2). The interface loads the document and opens a second window. 
+
+The window displays a graph with the locations of the conditions and the extracted drainage network (Figure 7). The drainage network represents the axis of the main channel of the synthetic geometry. To represent the axis of the selected breach in the preprocessing stage (Section 1.4.1), the interface requests the user to specify the angle at which the breach is located, with the location of the reservoir as the origin. The selected angle must ensure that the breach axis is parallel to the drainage network, just as it is in the synthetic geometry (Figure 2). The button "See AoI" opens a new window showing a Google Earth viewer with the locations of the AoI.
+
+Figure 7. Location of AoI and axes Lagunilla
