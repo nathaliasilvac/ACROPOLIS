@@ -9,6 +9,8 @@ ACROPOLIS is a  tool designed for the classification of risk associated with off
 4. Stochastic analysis
 
 ## Prerequisites 
+We recommend the use of [Anaconda](https://www.anaconda.com/download) to install the dependencies
+
 -[Python 3.8](https://www.python.org/downloads/release/python-380/)
 
 -[pyproj 3.4.1](https://pyproj4.github.io/pyproj/stable/)
