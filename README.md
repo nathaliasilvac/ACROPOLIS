@@ -15,7 +15,7 @@ ACROPOLIS is a  tool designed for the classification of risk associated with off
 
 -[tkintermapview 1.17](https://github.com/TomSchimansky/TkinterMapView)
 
--[tkinter 3.11](https://docs.python.org/3/library/tkinter.html)
+-[tkinter 3.17](https://docs.python.org/3/library/tkinter.html)
 
 -[geopandas 0.11](https://geopandas.org/en/stable/)
 
