@@ -38,7 +38,7 @@ We recommend the use of [Anaconda](https://www.anaconda.com/download) to install
 -[scikit-learn 0.24.1](https://scikit-learn.org/stable/install.html)
 
  ## Installation  
-Download the "Scripts" folder and the [ML model](https://drive.google.com/file/d/1LAI0xOYKKjGAjZYNjWS_DYsMXkeV5zJR/view?usp=drive_link),  and save the files in the same folder on your computer. Execute the Python file from the Python console or any other console, such as Spyder.
+Download the "Scripts" folder and the [ML model](https://drive.google.com/file/d/17S3wYn5wF1bP5fG4nov6XY4Ez2rLzriO/view?usp=drive_link),  and save the files in the same folder on your computer. Execute the Python file from the Python console or any other console, such as Spyder.
 
 ## Support
 For support, email me at nsilva@cimne.upc.edu
