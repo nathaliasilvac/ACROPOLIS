@@ -48,7 +48,7 @@ Figure 4. Example selection of the parameters on the terrain profile of the brea
 
 To estimate the transverse slope (St), the user can draw multiple profiles crossing perpendicular to the breach axis. By following the same procedure as for the longitudinal slopes, it is possible to estimate the transverse slope. Additionally, with the cross-sections, it is possible to observe if there is a preferential  channel and the direction of flow. Using the same elevation profile, the dimensions of the channel can be estimated, along with the BL distance.
 
-# 2. Application of the tool
+# 2. Using ACROPOLIS
 ## 2.1 Main window:
 The main window of the interface consists of a Project menu, where the corresponding information regarding the physical parameters and synthetic geometry is located. At the top, there is an option for the coordinate system, where you can choose the system in which you want to work. The options include the two systems used in Spain: EPSG:25830 - ETRS89 / UTM zone 30N and EPSG:25831 - ETRS89 / UTM zone 31N.
 It is important to select the coordinate system in which the information was extracted during the pre-processing (sections 1.1 and 1.3).
