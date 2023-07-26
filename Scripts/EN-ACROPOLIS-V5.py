@@ -167,7 +167,7 @@ def dem():
     plt.rc('xtick', labelsize=8)
     
     
-
+    #Plot dem anf accumulation
    
     fig, (ax,ax1) = plt.subplots(1,2,figsize=(18, 8))
     im1=ax.imshow(elevDem, extent=grid.extent, cmap='terrain')
@@ -202,6 +202,7 @@ def dem():
     
         
     def drawred():
+            #Filter drainage network
             streams=grid.extract_river_network('dir','acc', threshold=t.get(),dirmap=dirmap)
             streams['features'][:2]
             
@@ -248,6 +249,7 @@ def dem():
             
             
             def locaff():
+                #Open file with AoI
                 class loccoor():
                     param=[]
                     filepath = filedialog.askopenfilename(filetypes=[("CSV files", ".csv")], title="Open file") 
@@ -308,84 +310,87 @@ def dem():
                 
                 def ejes():
                     
-
+                    #'Calculate rotate axes'
                     xbalsa=coorbalsa.balsa[0]
                     ybalsa=coorbalsa.balsa[1]
                     rotacion=balsa.alpha.get()
                     
-                    'Calcular ejes rotados'
-                    alpha=rotacion*math.pi/180
-                    y=np.arange(-1000,2000,20)
-                    x=np.zeros(len(y))
+                    if not rotacion:
+                    # Display a warning message
+                        messagebox.showwarning("Warning", "Please fill in all the required fields")
+                    else:                        
+                        
+                        alpha=rotacion*math.pi/180
+                        y=np.arange(-1000,2000,20)
+                        x=np.zeros(len(y))
                     
                     
-                    ejebalsa=[]
-                    for k in range(0,len(x)):
+                        ejebalsa=[]
+                        for k in range(0,len(x)):
     
-                        xp=(x[k]*math.cos(alpha)+y[k]*math.sin(alpha))+xbalsa
-                        yp=(-1*x[k]*math.sin(alpha)+y[k]*math.cos(alpha))+ybalsa
-                        r=[xp,yp]
-                        ejebalsa.append(r)
+                            xp=(x[k]*math.cos(alpha)+y[k]*math.sin(alpha))+xbalsa
+                            yp=(-1*x[k]*math.sin(alpha)+y[k]*math.cos(alpha))+ybalsa
+                            r=[xp,yp]
+                            ejebalsa.append(r)
    
-                    ejebalsa=pd.DataFrame(ejebalsa, columns=['x','y'])
+                        ejebalsa=pd.DataFrame(ejebalsa, columns=['x','y'])
                     
-                    x=np.arange(-500,4000,20)
-                    y=np.zeros(len(x))
+                        x=np.arange(-500,4000,20)
+                        y=np.zeros(len(x))
                     
-                    ejebrecha=[]
+                        ejebrecha=[]
 
-                    for k in range(0,len(x)):
+                        for k in range(0,len(x)):
     
-                        xp=(x[k]*math.cos(alpha)+y[k]*math.sin(alpha))+xbalsa
-                        yp=(-1*x[k]*math.sin(alpha)+y[k]*math.cos(alpha))+ybalsa
-                        r=[xp,yp]
-                        ejebrecha.append(r)
+                            xp=(x[k]*math.cos(alpha)+y[k]*math.sin(alpha))+xbalsa
+                            yp=(-1*x[k]*math.sin(alpha)+y[k]*math.cos(alpha))+ybalsa
+                            r=[xp,yp]
+                            ejebrecha.append(r)
    
-                    ejebrecha=pd.DataFrame(ejebrecha, columns=['x','y'])
+                        ejebrecha=pd.DataFrame(ejebrecha, columns=['x','y'])
                     
                     
-                    Xmin=coorde.coord['x'].min()
-                    Ymin=coorde.coord['y'].min()
-                    Xmax=coorde.coord['x'].max()
-                    Ymax=coorde.coord['y'].max()
+                        Xmin=coorde.coord['x'].min()
+                        Ymin=coorde.coord['y'].min()
+                        Xmax=coorde.coord['x'].max()
+                        Ymax=coorde.coord['y'].max()
                     
                     
                     
-                    lim=coorde.coord.loc[coorde.coord['x']>=Xmin]
-                    lim1=lim.loc[lim['x']<=Xmax]
-                    lim2=lim1.loc[lim1['y']<=Ymax]
+                        lim=coorde.coord.loc[coorde.coord['x']>=Xmin]
+                        lim1=lim.loc[lim['x']<=Xmax]
+                        lim2=lim1.loc[lim1['y']<=Ymax]
                     
-                    class mainc():
-                        mainchannel=lim2.loc[lim2['y']>=Ymin]
+                        class mainc():
+                            mainchannel=lim2.loc[lim2['y']>=Ymin]
                     
-                    for item in plot.canvas.get_tk_widget().find_all():
-                        plot.canvas.get_tk_widget().destroy()
+                        for item in plot.canvas.get_tk_widget().find_all():
+                            plot.canvas.get_tk_widget().destroy()
                     
-                    fig1, ax1=plt.subplots(figsize=(8,8))
-                    ax1.scatter(xa,ya, label='AoI', s=70,marker='^',color='green')
-                    #ax1.scatter(coorde.coord['x'],coorde.coord['y'],s=5, label='Red de drenaje',alpha=0.8, color='brown')
-                    ax1.scatter(mainc.mainchannel['x'],mainc.mainchannel['y'],s=15, label='Main channel', color='blue')
-                    ax1.scatter(xbalsa,ybalsa, s=150, marker='v', label='Reservoir', color='red')
-                    ax1.plot(ejebalsa['x'],ejebalsa['y'], label='Reservoir axis', linestyle='--', color='black')
-                    ax1.plot(ejebrecha['x'],ejebrecha['y'], label='Breach axis', linestyle='--', color='green')
-                    ax1.grid()
-                    ax1.legend(fontsize=14)
-                    ax1.set_title('Localization AoI, axes and channel', fontsize=16, fontweight="bold")
-                    canvas = FigureCanvasTkAgg(fig1, master = frame)  
-                    canvas.draw()
-                    canvas.get_tk_widget().grid(row=8,columnspan=4, padx=10) 
+                        fig1, ax1=plt.subplots(figsize=(8,8))
+                        ax1.scatter(xa,ya, label='AoI', s=70,marker='^',color='green')
+                        ax1.scatter(mainc.mainchannel['x'],mainc.mainchannel['y'],s=15, label='Main channel', color='blue')
+                        ax1.scatter(xbalsa,ybalsa, s=150, marker='v', label='Reservoir', color='red')
+                        ax1.plot(ejebalsa['x'],ejebalsa['y'], label='Reservoir axis', linestyle='--', color='black')
+                        ax1.plot(ejebrecha['x'],ejebrecha['y'], label='Breach axis', linestyle='--', color='green')
+                        ax1.grid()
+                        ax1.legend(fontsize=14)
+                        ax1.set_title('Localization AoI, axes and channel', fontsize=16, fontweight="bold")
+                        canvas = FigureCanvasTkAgg(fig1, master = frame)  
+                        canvas.draw()
+                        canvas.get_tk_widget().grid(row=8,columnspan=4, padx=10) 
                     
-                    plot.canvas=canvas
+                        plot.canvas=canvas
                     
                     def distancias():
-                        #new window
+                        #new window, Calculate distance between AoI and axes
                         xaff=xa
                         yaff=ya
                         
                         xmain=np.asarray(mainc.mainchannel['x'])
                         ymain=np.asarray(mainc.mainchannel['y'])
                         dchannely=[]
-                        
+                        #Channel
                         ang=balsa.alpha.get()
                         for k in range(0,len(xaff)):
                             dchannel=[]
@@ -459,7 +464,7 @@ def dem():
                        
                         loaded_model = joblib.load(filename)
                         
-    
+                        #Create dataset
                         Damloc=pd.DataFrame(np.full(n,[Bl.get()]),columns=['Damloc'])
                         slope_IA=pd.DataFrame(np.full(n,[Slb.get()]),columns=['slope_IA'])
                         trans_slope=pd.DataFrame(np.full(n,[St.get()]),columns=['trans_slope'])
@@ -477,7 +482,7 @@ def dem():
                                      hchannel,manning,Dresx['D_damx'],Dresy['D_damy'],
                                      dchannely['D_channely']], axis=1)
                     
-                        
+                        #Predict risk
                         classprediction=loaded_model.predict(malla)
                         f=[]
                         for k in range(0,len(classprediction)):
@@ -563,10 +568,10 @@ def dem():
                         tk.Label(frame, text='Type AoI', font = ('calibre',12,'bold')).grid(row=12,column=3)
                         
                         def esto():
+                            #Stochastic analysis
                          
                             def nextt(): 
                           
-                        
                                 tk.Label(frame, text='Iterations (%)', font = ('calibre',12,'bold')).grid(row=12,column=4)
                                 p=0.05
                                 dx=np.asarray(Dresx['D_damx'])
@@ -671,11 +676,7 @@ def dem():
                 alpha_entry=tk.Entry(frame,textvariable=balsa.alpha,font = ('calibre',10,'normal'))
                 alpha_label.grid(row=1, column=0, padx=5)
                 alpha_entry.grid(row=1,column=1, padx=5)
-                
-              
-            
-                      
-        
+                                                       
                 
                 acept_btn=tk.Button(frame,text ='OK', command=ejes, font = ('calibre',10,'bold'))
                 acept_btn.grid(row=5, column=1, padx=5)
@@ -729,11 +730,18 @@ def dem():
     
     
 def cont():
-    title_label=tk.Label(second_frame, text = 'Drainage network', font = ('calibre',12,'bold'),padx=10, pady=10)
-    title_label.grid(row=11,columnspan=17)
-    ttk.Label(second_frame, text = "Open DEM", 
-        font = ('calibre',10,'bold')).grid(row=12,column=4, pady=8)
-    tk.Button(second_frame,text ='Open', command=dem, font = ('calibre',10,'bold')).grid(row=12,column=5, pady=8)
+    
+    if not Bl.get() or not Wr.get() or not Lr.get() or not Slb.get() or not Slc.get() or not St.get() or not Lb.get() or not Manning.get() or not voll.get() or not x.get() or not y.get():
+   
+        messagebox.showwarning("Warning", "Please fill in all the required fields.")
+    else:
+    
+    
+        title_label=tk.Label(second_frame, text = 'Drainage network', font = ('calibre',12,'bold'),padx=10, pady=10)
+        title_label.grid(row=11,columnspan=17)
+        ttk.Label(second_frame, text = "Open DEM", 
+                  font = ('calibre',10,'bold')).grid(row=12,column=4, pady=8)
+        tk.Button(second_frame,text ='Open', command=dem, font = ('calibre',10,'bold')).grid(row=12,column=5, pady=8)
     
 
 def geo():
@@ -824,21 +832,25 @@ vol_label = tk.Label(second_frame, text = 'Volume (Hm3)', font = ('calibre',10,'
 vol_entry=tk.Entry(second_frame, textvariable = voll, font = ('calibre',10,'normal'))
 
 def mapa():
-    cc=sco.get()
-    X=x.get() #Balsa
-    Y=y.get()
-    if cc=='EPSG:25830 - ETRS89 / UTM zone 30N':
-        myProj = Proj("+proj=utm +zone=30 +north +ellps=WGS84 +datum=WGS84 +units=m +no_defs")
-        lat,lon=myProj(X,Y, inverse=True)
-        map_widget.set_position(lon, lat)
-        map_widget.set_zoom(15)
-        marker = map_widget.set_marker(lon,lat, text="Reservoir")
-    if cc=='EPSG:25831 - ETRS89 / UTM zone 31N':
-        myProj = Proj("+proj=utm +zone=31 +north +ellps=WGS84 +datum=WGS84 +units=m +no_defs")
-        lat,lon=myProj(X,Y, inverse=True)
-        map_widget.set_position(lon, lat)
-        map_widget.set_zoom(15)
-        marker = map_widget.set_marker(lon,lat, text="Balsa")
+    
+    if not x.get() or not y.get():
+        messagebox.showwarning("Warning", "Please fill in all the required fields.")
+    else:
+        cc=sco.get()
+        X=x.get() #Balsa
+        Y=y.get()
+        if cc=='EPSG:25830 - ETRS89 / UTM zone 30N':
+            myProj = Proj("+proj=utm +zone=30 +north +ellps=WGS84 +datum=WGS84 +units=m +no_defs")
+            lat,lon=myProj(X,Y, inverse=True)
+            map_widget.set_position(lon, lat)
+            map_widget.set_zoom(15)
+            marker = map_widget.set_marker(lon,lat, text="Reservoir")
+        if cc=='EPSG:25831 - ETRS89 / UTM zone 31N':
+            myProj = Proj("+proj=utm +zone=31 +north +ellps=WGS84 +datum=WGS84 +units=m +no_defs")
+            lat,lon=myProj(X,Y, inverse=True)
+            map_widget.set_position(lon, lat)
+            map_widget.set_zoom(15)
+            marker = map_widget.set_marker(lon,lat, text="Balsa")
 
 ttk.Label(second_frame, text = "Coordinate system :", 
         font = ('calibre',10,'bold')).grid(row=2,column=3, pady=10)
