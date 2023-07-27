@@ -38,9 +38,13 @@ We recommend the use of [Anaconda](https://www.anaconda.com/download) to install
 -[scikit-learn 0.24.1](https://scikit-learn.org/stable/install.html)
 
  ## Installation  
-Please download all the files from the "Script" folder and save them to your computer in the same folder. The ML model has been compressed into multiple zip files, which are in the folder ML Model, so to extract it, please download all the zip files in the same folder where the python script is located and extract the file in ACROPOLIS_ML.zip001.
+1. Download all the files from the "Script" folder and save them to your computer in the same folder or clone the repository
 
-Execute the Python file from the Python console or any other console, such as Spyder.
+2. The ML model has been compressed into multiple zip files, which are in the folder ML Model, so to extract it, please download all the zip files in the same folder where the Python script is located and extract the file in ACROPOLIS_ML.zip001.
+   
+3. Install all the prerequisites making sure to install the correct version. They can be installed using pip or conda.
+
+4. Execute the Python file from the Python console.
 
 ## Support
 For support, email me at nsilva@cimne.upc.edu
