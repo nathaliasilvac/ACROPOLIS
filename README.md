@@ -50,7 +50,7 @@ We recommend the use of [Anaconda](https://www.anaconda.com/download) to install
 ACROPOLIS is distributed under the GNU Affero General Public License v3.0 (AGPL-3.0). This license is specifically designed to guarantee that users interacting with the software over a network, like through a web application, have access to its source code as well. It provides you with the freedom to utilize, modify, and distribute ACROPOLIS in accordance with the terms and conditions stated in the AGPL-3.0 license.
 
 ## Disclaimer
-CROPOLIS is provided "as-is" and without any warranty. The developers do not offer any assurances regarding the accuracy, reliability, or suitability of the software for any specific purpose.
+ACROPOLIS is provided "as-is" and without any warranty. The developers do not offer any assurances regarding the accuracy, reliability, or suitability of the software for any specific purpose.
 
 Under no circumstances shall the developers of ACROPOLIS be liable for any direct, indirect, incidental, special, exemplary, or consequential damages, including but not limited to loss of data, profits, or business interruption, arising from the use or inability to use the ACROPOLIS software.
 
