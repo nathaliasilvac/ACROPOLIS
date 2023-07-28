@@ -8,34 +8,39 @@ ACROPOLIS is a  tool designed for the classification of risk associated with off
 3. Overall classification of risk of the off-stream reservoir (A, B or C)
 4. Stochastic analysis
 
-## Prerequisites 
-We recommend the use of [Anaconda](https://www.anaconda.com/download) to install the dependencies
+## Requisites 
 
--[Python 3.8](https://www.python.org/downloads/release/python-380/)
+-[Python >=3.8](https://www.python.org/downloads/release/python-3817/)
 
--[pyproj 3.4.1](https://pyproj4.github.io/pyproj/stable/)
+-geopandas==0.11
 
--[tkintermapview 1.17](https://github.com/TomSchimansky/TkinterMapView)
+-joblib==1.2.0
 
--[tkinter 3.17](https://docs.python.org/3/library/tkinter.html)
+-matplotlib==3.6.2
 
--[geopandas 0.11](https://geopandas.org/en/stable/)
+-numpy==1.23.4
 
--[joblib 1.2.0](https://joblib.readthedocs.io/en/latest/installing.html)
+-pandas==1.5.1
 
--[pillow 9.3.0](https://pillow.readthedocs.io/en/stable/installation.html)
+-pillow==9.3.0
 
--[pysheds 0.2.7](https://pypi.org/project/pysheds/)
+-pyproj==3.4.1
 
--[rasterio 1.3.4](https://pypi.org/project/rasterio/)   
+-pysheds==0.2.7
 
--[matplotlib 3.6.2](https://matplotlib.org/stable/index.html)
+-rasterio==1.3.4
 
--[numpy 1.23.4](https://numpy.org/install/)
+-scikit-learn==0.24.1
 
--[pandas 1.5.1](https://pypi.org/project/pandas/)
+-patool==1.12
 
--[scikit-learn 0.24.1](https://scikit-learn.org/stable/install.html)
+-shutils==0.1.0
+
+Install the packages listed in the requirements.txt file using pip:
+ ```
+   pip install -r requirements.txt
+
+ ``
 
  ## Installation  
 1. **Clone the Repository:**
