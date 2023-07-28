@@ -13,7 +13,7 @@ We recommend the use of [Anaconda](https://www.anaconda.com/download) to run and
 The prerequisites for using ACROPOLIS are as follows:
 -[Python >=3.8](https://www.python.org/downloads/release/python-3817/)
 
--geopandas, joblib, matplotlib, numpy, panda, patool, pillow, pyproj, pysheds, rasterio, scikit-learn== and shutils.
+-geopandas, joblib, matplotlib, numpy, panda, patool, pillow, pyproj, pysheds, rasterio, scikit-learn and shutils.
 
 The recommended versions of the packages are found in requirements.txt
 
