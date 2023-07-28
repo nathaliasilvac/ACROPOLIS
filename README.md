@@ -5,7 +5,7 @@ ACROPOLIS is a  tool designed for the classification of risk associated with off
 ## The software tool provides:
 1. Visualization of the flow accumulation based on a Digital Elevation Model (DEM)
 2. Classification of areas of interest (AoI) as "risk" or "no risk".
-3. Overall classification of risk of the off-stream reservoir (A, B or C)
+3. Hazard classification of the off-stream reservoir (A, B or C)
 4. Stochastic analysis
 
 ## Prerequisites
