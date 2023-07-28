@@ -38,13 +38,14 @@ We recommend the use of [Anaconda](https://www.anaconda.com/download) to install
 -[scikit-learn 0.24.1](https://scikit-learn.org/stable/install.html)
 
  ## Installation  
-1. Download all the files from the "Script" folder and save them to your computer.
-
-2. The ML model has been compressed into multiple zip files, which are in the folder ML Model, so to extract it, please download all the zip files in the same folder where the Python script is located and extract the file in ACROPOLIS_ML.zip001.
+1. **Clone the Repository:**
+   ```
+   git clone https://github.com/your-username/ACROPOLIS.git
+   ```
    
 3. Install all the prerequisites making sure to install the correct version. They can be installed using pip or conda.
 
-4. Execute the Python file from the Python console.
+4. Execute the Python file (ACROPOLIS.py) from the Python console.
 
 ## License
 ACROPOLIS is distributed under the GNU Affero General Public License v3.0 (AGPL-3.0). This license is specifically designed to guarantee that users interacting with the software over a network, like through a web application, have access to its source code as well. It provides you with the freedom to utilize, modify, and distribute ACROPOLIS in accordance with the terms and conditions stated in the AGPL-3.0 license.
