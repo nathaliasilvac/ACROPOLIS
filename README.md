@@ -27,7 +27,7 @@ The recommended versions of the packages are found in requirements.txt
 
 2. **Create a new conda environment in the Anaconda prompt and activate**
    ```
-   conda create --name ACROPOLIS
+   conda create --name ACROPOLIS python
    ```
    ```
    conda activate ACROPOLIS
