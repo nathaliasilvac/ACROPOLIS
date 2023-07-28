@@ -10,6 +10,7 @@ ACROPOLIS is a  tool designed for the classification of risk associated with off
 
 ## Prerequisites
 We recommend the use of [Anaconda](https://www.anaconda.com/download) to run and create environments.
+
 The prerequisites for using ACROPOLIS are as follows:
 -[Python >=3.8](https://www.python.org/downloads/release/python-3817/)
 
