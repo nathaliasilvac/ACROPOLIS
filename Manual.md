@@ -30,6 +30,7 @@ The user can extract the coordinates for each affected area using Google Earth o
 The Machine Learning model integrated into the interface was trained with 15 input variables based on synthetic geometry. To apply the model to real cases, a conversion from synthetic parameters to real terrain is required. Figure 4 shows the diagram of the synthetic geometry, which is located in the Project menu of the interface. The user must manually enter the displayed variables, taking into account the indicated units.
 
 Figure 2. Synthetic geometry
+
 ![geometry](Images/Synthetic.bmp)
 
 Generally, the user is aware of the dimensions of the reservoir (Wr, Hr, Lr, and Volume) and the estimation of the Manning coefficient was explained in section 1.2. Therefore, it is necessary for them to calculate the other 8 variables. [Google Earth Pro](https://earth.google.com/web/) is a freely available tool that provides the necessary tools to estimate the missing parameters.
@@ -72,6 +73,7 @@ When clicking on "Upload AoI," the interface will prompt the user to select the 
 The window displays a graph with the locations of the conditions and the extracted drainage network (Figure 7). The drainage network represents the axis of the main channel of the synthetic geometry. To represent the axis of the selected breach in the preprocessing stage (Section 1.4.1), the interface requests the user to specify the angle at which the breach is located, with the location of the reservoir as the origin. The selected angle must ensure that the breach axis is parallel to the drainage network, just as it is in the synthetic geometry (Figure 2). The button "See AoI" opens a new window showing a Google Earth viewer with the locations of the AoI.
 
 Figure 7. Location of AoI and axes Lagunilla
+
 ![Lagunilla_aoi](Images/AOI_Lagunilla.bmp)
 
 ## 2.1 Calculation of risk and classification of the off-stream reservoir:
