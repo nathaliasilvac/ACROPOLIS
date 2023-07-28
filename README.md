@@ -35,7 +35,7 @@ The recommended versions of the packages are found in requirements.txt
    
 3. **Install the packages listed in the requirements.txt file**
    ```
-    pip install -r requirements.txt
+    pip install --user -r requirements.txt
    ```
    
 4. **Execute the Python file (ACROPOLIS.py)**
