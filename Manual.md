@@ -1,6 +1,20 @@
 # ACROPOLIS: User Manual
 To use the application, the user must perform a pre-processing step, which involves estimating the input data for the model, collecting terrain details, and locating the areas of concern to evaluate.
 This manual provides a step-by-step guide for the user, from data pre-processing to estimating the reservoir classification.
+
+# Table of Contents
+- [1. Pre-process](#1-pre-process)
+  - [1.1 Digital Elevation Model (DEM)](#11-digital-elevation-model-dem)
+  - [1.2 Roughness](#12-roughness)
+  - [1.3 Areas of Interest (AoI)](#13-areas-of-interest-aoi)
+  - [1.4 Physical parameters](#14-physical-parameters)
+    - [1.4.1 Breach location](#141-breach-location)
+    - [1.4.2 Distances and slopes](#142-distances-and-slopes)
+- [2. Using ACROPOLIS](#2-using-acropolis)
+  - [2.1 Main window](#21-main-window)
+  - [2.2 Calculation window and results](#22-calculation-window-and-results)
+  - [2.3 Calculation of risk and classification of the off-stream reservoir](#23-calculation-of-risk-and-classification-of-the-off-stream-reservoir)
+
 # 1. Pre-process:
 The pre-processing is divided into four parts: 1) Downloading the digital elevation model (DEM), 2) Assigning roughness, 3) Locating affected areas, and 4) Estimating physical parameters.
 
@@ -67,7 +81,7 @@ At the bottom of the accumulation map, the user must enter the "Threshold to Fil
 Figure 6. Flow accumulation and filtered network Lagunilla
 ![Lagunilla_drain](Images/Drainage_Lagunilla.bmp)
 
-## 2.1 Calculation window and results:
+## 2.2 Calculation window and results:
 When clicking on "Upload AoI," the interface will prompt the user to select the file containing the condition information, and only files with the extension *.csv are allowed. This file is prepared during the processing phase (Section 1.2). The interface loads the document and opens a second window. 
 
 The window displays a graph with the locations of the conditions and the extracted drainage network (Figure 7). The drainage network represents the axis of the main channel of the synthetic geometry. To represent the axis of the selected breach in the preprocessing stage (Section 1.4.1), the interface requests the user to specify the angle at which the breach is located, with the location of the reservoir as the origin. The selected angle must ensure that the breach axis is parallel to the drainage network, just as it is in the synthetic geometry (Figure 2). The button "See AoI" opens a new window showing a Google Earth viewer with the locations of the AoI.
@@ -76,7 +90,7 @@ Figure 7. Location of AoI and axes Lagunilla
 
 ![Lagunilla_aoi](Images/AOI_Lagunilla.bmp)
 
-## 2.1 Calculation of risk and classification of the off-stream reservoir:
+## 2.3 Calculation of risk and classification of the off-stream reservoir:
 When calculating the breach axis, a new button appears at the bottom. When clicking on "Risk calculation," the interface uses the ML model and classifies each of the conditions as "Risk" or "Not Risk." With this classification and considering the type of condition, the dam is classified accordingly. 
 
 The classification of the conditions shown in Figure 8 is of a deterministic type. However, the user can perform a stochastic analysis by clicking on the button. With this option, the interface will create a number of iterations, varying each input variable by ±10%. Upon clicking the button, a new window opens, asking the user to enter the number of iterations (n) they wish to perform. The interface will then classify each condition n times using the Machine Learning model and calculate the percentage of times the condition is classified as "Risk" or "Not Risk," as applicable. Once the interface completes the iterations, a new column will appear next to the risk classification, showing the estimated percentage (Figure 8).
