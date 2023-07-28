@@ -12,45 +12,23 @@ ACROPOLIS is a  tool designed for the classification of risk associated with off
 
 -[Python >=3.8](https://www.python.org/downloads/release/python-3817/)
 
--geopandas==0.11
+-geopandas==0.11, joblib==1.2.0, matplotlib==3.6.2, numpy==1.23.4, pandas==1.5.1, patool==1.12, pillow==9.3.0, pyproj==3.4.1, pysheds==0.2.7, rasterio==1.3.4, scikit-learn==0.24.1 and shutils==0.1.0
 
--joblib==1.2.0
-
--matplotlib==3.6.2
-
--numpy==1.23.4
-
--pandas==1.5.1
-
--pillow==9.3.0
-
--pyproj==3.4.1
-
--pysheds==0.2.7
-
--rasterio==1.3.4
-
--scikit-learn==0.24.1
-
--patool==1.12
-
--shutils==0.1.0
-
-Install the packages listed in the requirements.txt file using pip:
- ```
+**Install the packages listed in the requirements.txt file using pip:**
+   ```
    pip install -r requirements.txt
+   ```
 
- ``
 
- ## Installation  
+
+ ## Installation
+
 1. **Clone the Repository:**
    ```
    git clone https://github.com/your-username/ACROPOLIS.git
    ```
-   
-3. Install all the prerequisites making sure to install the correct version. They can be installed using pip or conda.
-
-4. Execute the Python file (ACROPOLIS.py) from the Python console.
+ 
+2. Execute the Python file (ACROPOLIS.py) from the Python console.
 
 ## License
 ACROPOLIS is distributed under the GNU Affero General Public License v3.0 (AGPL-3.0). This license is specifically designed to guarantee that users interacting with the software over a network, like through a web application, have access to its source code as well. It provides you with the freedom to utilize, modify, and distribute ACROPOLIS in accordance with the terms and conditions stated in the AGPL-3.0 license.
