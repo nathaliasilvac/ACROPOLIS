@@ -23,13 +23,11 @@ from pyproj import Proj
 import csv
 from pysheds.grid import Grid
 import matplotlib.pyplot as plt
-#import matplotlib.colors as colors
 from matplotlib.backends.backend_tkagg import (FigureCanvasTkAgg)
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 import math
 import matplotlib.ticker as ticker
 import rasterio
-#from rasterio.transform import xy
 import warnings
 warnings.filterwarnings("ignore")
 
@@ -213,7 +211,7 @@ def dem():
 
     # Plot dem anf accumulation
 
-    fig, (ax, ax1) = plt.subplots(1, 2, figsize=(18, 8))
+    fig, (ax, ax1) = plt.subplots(1, 2, figsize=(12, 6))
     im1 = ax.imshow(elevDem, extent=grid.extent, cmap='terrain')
     ax.scatter(coorbalsa.balsa[0], coorbalsa.balsa[1],
                color='red', marker='v', s=150, label='Balsa')
@@ -273,7 +271,7 @@ def dem():
                 c1 = coord.append(coordinates)
                 coord = c1
 
-        fig, ax = plt.subplots(figsize=(8, 8))
+        fig, ax = plt.subplots(figsize=(6, 6))
         ax.grid()
         ax.scatter(coorbalsa.balsa[0], coorbalsa.balsa[1],
                    color='red', marker='v', s=150, label='Reservoir')
@@ -332,7 +330,7 @@ def dem():
 
             class plot():
 
-                fig1, ax1 = plt.subplots(figsize=(8, 8))
+                fig1, ax1 = plt.subplots(figsize=(6, 6))
                 ax1.scatter(xa, ya, label='AoI', s=70, marker='^', color='green')
                 ax1.scatter(coorde.coord['x'], coorde.coord['y'],
                             s=5, label='Main drainage', color='brown')
@@ -573,7 +571,7 @@ def dem():
                     grave = data.loc[data['Riesgo'] == 'Risk']
                     nograve = data.loc[data['Riesgo'] == 'No Risk']
 
-                    fig1, ax1 = plt.subplots(figsize=(8, 8))
+                    fig1, ax1 = plt.subplots(figsize=(6, 6))
 
                     ax1.scatter(mainc.mainchannel['x'], mainc.mainchannel['y'],
                                 s=15, label='Main channel', alpha=0.2, color='brown')
