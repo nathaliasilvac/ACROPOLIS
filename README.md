@@ -43,9 +43,7 @@ The recommended versions of the packages are found in requirements.txt
    ```
     Python ACROPOLIS.py
    ```
-## Example
 
-To explore the functionalities of ACROPOLIS, you can access the Test folder, which contains the Digital Elevation Model (DEM) and Area of Interest (AoI) data for a real case named "El Rubial." Moreover, the input parameters have already been precalculated and can be readily found in the file "Test.txt."
 
 ## License
 ACROPOLIS is distributed under the GNU Affero General Public License v3.0 (AGPL-3.0). This license is specifically designed to guarantee that users interacting with the software over a network, like through a web application, have access to its source code as well. It provides you with the freedom to utilize, modify, and distribute ACROPOLIS in accordance with the terms and conditions stated in the AGPL-3.0 license.
