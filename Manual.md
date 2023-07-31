@@ -99,3 +99,6 @@ Figure 8. Results and stochastic analysis
 ![Lagunilla_aoi](Images/Results.bmp)
 
 
+## Example
+
+To explore the functionalities of ACROPOLIS, you can access the Test folder, which contains the Digital Elevation Model (DEM) and Area of Interest (AoI) data for a real case named "El Rubial." Moreover, the input parameters have already been precalculated and can be readily found in the file "Test.txt."
