@@ -35,7 +35,7 @@ warnings.filterwarnings("ignore")
 
 
 def combine_split_zip_files(zip_prefix, target_zip_file):
-    model_folder = "ML_Model"
+    model_folder = "ML_model"
     model_folder_path = os.path.join(os.getcwd(), model_folder)
     # Get a list of all split zip files in the 'ML Model' directory
     split_zip_files = [file for file in os.listdir(
@@ -54,7 +54,7 @@ def combine_split_zip_files(zip_prefix, target_zip_file):
 file_to_check = "ACROPOLIS_ML.sav"
 
 if not os.path.exists(file_to_check):
-    model_folder = "ML Model"
+    model_folder = "ML_model"
     merged_zip_file = "ACROPOLIS_ML_merged.zip"
     zip_file_prefix = "ACROPOLIS_ML.zip."
 
