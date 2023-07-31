@@ -211,7 +211,7 @@ def dem():
 
     # Plot dem anf accumulation
 
-    fig, (ax, ax1) = plt.subplots(1, 2, figsize=(12, 6))
+    fig, (ax, ax1) = plt.subplots(1, 2, figsize=(14, 6))
     im1 = ax.imshow(elevDem, extent=grid.extent, cmap='terrain')
     ax.scatter(coorbalsa.balsa[0], coorbalsa.balsa[1],
                color='red', marker='v', s=150, label='Balsa')
